@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graph Visualization with D3.js</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Rumour Detection System - Social Network Analysis</h1>
+    <div id="main-container">
+        <div id="graph-container"></div>
+        <div id="input-container">
+            <span id="edge-submission">
+                <input id="edge-input" type="text" placeholder="Enter number of edges"/>
+                <button id="submit_btn">Submit</button>
+            </span>
+            <div id="error-message" style="color: red; display: none;"></div>
+        </div>
+        <div id="rumour-container">
+            <span id="rumourinput" style="display: none;">
+                <input id="rumourinp" type="text" placeholder='Enter the Nodes that are affected'></input>
+                <button id="Rumourbtn">Submit</button>
+            </span>
+            <span id="result-output">
+                Source Nodes are : <span id="source"></span>
+            </span>
+        </div>
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

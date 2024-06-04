@@ -1,0 +1,76 @@
+/* styles.css */
+#edge-submission {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    flex: 1 0 auto;
+}
+
+#graph-container {
+    width: 800px;
+    height: 600px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+#input-container {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    /*height: 200px;*/
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#rumour-container {
+    width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    height: 120px;
+    box-sizing: border-box;
+}
+
+#rumourinp {
+    width : 400px;
+}
+
+.node {
+    /*fill: steelblue;*/
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+
+.link {
+    stroke: #999;
+    stroke-opacity: 0.6;
+}
+
+.label {
+    font-size: 12px;
+    pointer-events: none;
+}
