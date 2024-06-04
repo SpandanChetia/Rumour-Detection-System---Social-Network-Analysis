@@ -363,7 +363,7 @@ const viewResults = ()=>{
     let result = "";
 
     for(let i=0; i<sourceNodes.length-1; i++){
-        result += sourceNodes[i] + ',';
+        result += sourceNodes[i] + ', ';
     }
     result += sourceNodes[sourceNodes.length-1];
     result_section.textContent = result;
