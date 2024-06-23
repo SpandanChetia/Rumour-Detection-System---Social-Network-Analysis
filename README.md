@@ -3,7 +3,7 @@
         <img src="./img/icon-warning-extreme.svg" alt="Warning Icon">
     </div>
     <div class="message">
-        <strong>Warning:</strong> The rumored affected nodes should belong to only a single community/component of nodes.
+        <strong>Warning:</strong> The rumored affected nodes should belong to only a single community/component of nodes like given in the sample below.
     </div>
 </div>
 
