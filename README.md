@@ -1,6 +1,6 @@
 
-<h1>Rumor Source Detection Problem</h1>
-<img src="./img/sample.png" alt="Sample Image">
+<h1 align="center">Rumor Source Detection Problem</h1>
+<img src="./img/sample.png" alt="Sample Image" align="center">
 
 > [!WARNING]\
 > Don't insert values of rumour affected nodes where the nodes belong to different communities/components of the graph network.
@@ -47,7 +47,7 @@
 <div class="section">
     <h2>Example</h2>
 
-<img src="./img/example.png" alt="Example Image">
+<img src="./img/example.png" alt="Example Image" align="center">
 
 <p><strong>Edges:</strong> (1, 2), (2, 3), (2, 4), (2, 1), (3, 2), (4, 2)</p>
 <p><i>V</i> = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}</p>
