@@ -1,12 +1,8 @@
-<div class="warning">
-    <div class="icon">
-        <img src="./img/icon-warning-extreme.svg" alt="Warning Icon">
-    </div>
-    <div class="message">
-        <strong>Warning:</strong> The rumored affected nodes should belong to only a single community/component of nodes like given in the sample below.
-    </div>
-</div>
+> [!WARNING]\
+> Don't insert values of rumour affected nodes where the nodes belong to different communities/components of the graph network.
 
+> [!NOTE]\
+> Rumour affected nodes should belong to the same component/community of nodes as given in the sample below.
 <div class="section">
     <h1>Rumor Source Detection Problem</h1>
     <img src="./img/sample.png" alt="Sample Image">
