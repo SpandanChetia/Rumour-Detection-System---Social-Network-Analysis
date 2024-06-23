@@ -1,13 +1,15 @@
+
+<h1>Rumor Source Detection Problem</h1>
+<img src="./img/sample.png" alt="Sample Image">
+
 > [!WARNING]\
 > Don't insert values of rumour affected nodes where the nodes belong to different communities/components of the graph network.
 
 > [!NOTE]\
 > Rumour affected nodes should belong to the same component/community of nodes as given in the sample below.
-<div class="section">
-    <h1>Rumor Source Detection Problem</h1>
-    <img src="./img/sample.png" alt="Sample Image">
-    <p>Consider a network of nodes modeled as an undirected graph <i>G(V,E)</i>. Suppose the rumor starts at node <i>v*</i> at time <i>t<sub>0</sub></i> and has spread in the network <i>G</i>. Assume the network is observed at some time <i>t<sub>x</sub></i> and <i>N</i> infected nodes are found. By definition, these <i>N</i> infected nodes must form a connected subgraph of <i>G</i>. Let's denote this subgraph by <i>G<sub>N</sub></i>.
-    </p>
+
+<p>Consider a network of nodes modeled as an undirected graph <i>G(V,E)</i>. Suppose the rumor starts at node <i>v*</i> at time <i>t<sub>0</sub></i> and has spread in the network <i>G</i>. Assume the network is observed at some time <i>t<sub>x</sub></i> and <i>N</i> infected nodes are found. By definition, these <i>N</i> infected nodes must form a connected subgraph of <i>G</i>. Let's denote this subgraph by <i>G<sub>N</sub></i>.
+</p>
     
 <p>The goal is to estimate a node <i>v</i> of the original source <i>v*</i> based on the observation. Mathematically,</p>
 
@@ -24,7 +26,6 @@
 </div>
 
 <p>Where <i>R(v, G)</i> is the total number of distinct permitted permutations of nodes of <i>G</i> that begin with node <i>v ∈ G</i> and respect the graph structure of <i>G</i>.</p>
-</div>
 
 <div class="section">
     <h2>Algorithm</h2>
