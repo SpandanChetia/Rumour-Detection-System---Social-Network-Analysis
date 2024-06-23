@@ -48,12 +48,12 @@
 <p><i>V<sub>n</sub></i> = {1, 2, 3, 4}</p>
 
 <p>Permutations for <i>v = 1</i></p>
-{1, 2, 3, 4} PP<br>
-{1, 2, 4, 3} PP<br>
-{1, 3, 2, 4} X<br>
-{1, 3, 4, 2} X<br>
-{1, 4, 2, 3} X<br>
-{1, 4, 3, 2} X</p>
+{1, 2, 3, 4}   PP<br>
+{1, 2, 4, 3}   PP<br>
+{1, 3, 2, 4}   X<br>
+{1, 3, 4, 2}   X<br>
+{1, 4, 2, 3}   X<br>
+{1, 4, 3, 2}   X</p>
 
 <p>Check if permutation {1, 2, 3, 4} is permitted:</p>
 
