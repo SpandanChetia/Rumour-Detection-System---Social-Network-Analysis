@@ -1,12 +1,14 @@
 
+<div align="center">
 <h1>Rumor Source Detection Problem</h1>
 <img src="./img/sample.png" alt="Sample Image">
+</div>
 
 > [!WARNING]\
 > Don't insert values of rumour affected nodes where the nodes belong to different communities/components of the graph network.
 
 > [!NOTE]\
-> Rumour affected nodes should belong to the same component/community of nodes as given in the sample below.
+> Rumour affected nodes should belong to the same component/community of nodes as given in the sample above.
 
 <p>Consider a network of nodes modeled as an undirected graph <i>G(V,E)</i>. Suppose the rumor starts at node <i>v*</i> at time <i>t<sub>0</sub></i> and has spread in the network <i>G</i>. Assume the network is observed at some time <i>t<sub>x</sub></i> and <i>N</i> infected nodes are found. By definition, these <i>N</i> infected nodes must form a connected subgraph of <i>G</i>. Let's denote this subgraph by <i>G<sub>N</sub></i>.
 </p>
@@ -46,9 +48,10 @@
 
 <div class="section">
     <h2>Example</h2>
-
-<img src="./img/example.png" alt="Example Image">
-
+<div>
+    <img src="./img/example.png" alt="Example Image">
+</div>
+    
 <p><strong>Edges:</strong> (1, 2), (2, 3), (2, 4), (2, 1), (3, 2), (4, 2)</p>
 <p><i>V</i> = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}</p>
 <p><i>V<sub>n</sub></i> = {1, 2, 3, 4}</p>
