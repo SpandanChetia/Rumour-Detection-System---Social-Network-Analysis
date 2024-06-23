@@ -1,41 +1,41 @@
 <div class="section">
     <h1>Rumor Source Detection Problem</h1>
     <img src="./img/sample.png" alt="Sample Image">
-    <p>Consider a network of nodes modeled as an undirected graph \( G(V,E) \). Suppose the rumor starts at node \( v^* \) at time \( t_0 \) and has spread in the network \( G \). Assume the network is observed at some time \( t_x \) and \( N \) infected nodes are found. By definition, these \( N \) infected nodes must form a connected subgraph of \( G \). Let's denote this subgraph by \( G_N \).
+    <p>Consider a network of nodes modeled as an undirected graph <i>G(V,E)</i>. Suppose the rumor starts at node <i>v*</i> at time <i>t<sub>0</sub></i> and has spread in the network <i>G</i>. Assume the network is observed at some time <i>t<sub>x</sub></i> and <i>N</i> infected nodes are found. By definition, these <i>N</i> infected nodes must form a connected subgraph of <i>G</i>. Let's denote this subgraph by <i>G<sub>N</sub></i>.
     </p>
     
-<p>The goal is to estimate a node \( v \) of the original source \( v^* \) based on the observation. Mathematically,</p>
+<p>The goal is to estimate a node <i>v</i> of the original source <i>v*</i> based on the observation. Mathematically,</p>
 
 <div class="code">
-    \( v = \arg\max_{v \in \mathbb{P}(G)} R(v, G) \) ......(1)
+    <i>v</i> = argmax<sub><i>v</i> ∈ <i>P(G)</i></sub> <i>R(v, G)</i> ......(1)
 </div>
 
-<p>Where \( \mathbb{P}(G \mid v) \) is the probability of observing \( G \) under any information diffusion model assuming \( v \) is the source \( v^* \).</p>
+<p>Where <i>P(G | v)</i> is the probability of observing <i>G</i> under any information diffusion model assuming <i>v</i> is the source <i>v*</i>.</p>
 
 <p>In DevabratShah’s algorithm, equation (1) is further simplified and refined as</p>
 
 <div class="code">
-    \( v = \arg\max_{v \in R(v, G)} R(v, G) \) ......(2)
+    <i>v</i> = argmax<sub><i>v</i> ∈ <i>R(v, G)</i></sub> <i>R(v, G)</i> ......(2)
 </div>
 
-<p>Where \( R(v, G) \) is the total number of distinct permitted permutations of nodes of \( G \) that begin with node \( v \in G \) and respect the graph structure of \( G \).</p>
+<p>Where <i>R(v, G)</i> is the total number of distinct permitted permutations of nodes of <i>G</i> that begin with node <i>v ∈ G</i> and respect the graph structure of <i>G</i>.</p>
 </div>
 
 <div class="section">
     <h2>Algorithm</h2>
 
-<p><strong>Permutation:</strong> Given a connected Tree \( G(V,E) \) and source node \( v \in V \), consider any permutation \( \sigma: \{1,2,\ldots, V\} \) of nodes where \( \sigma(a) \) denotes the position of node \( a \in V \) in the permutation \( \sigma \).</p>
+<p><strong>Permutation:</strong> Given a connected Tree <i>G(V,E)</i> and source node <i>v ∈ V</i>, consider any permutation <i>σ: {1, 2, ..., V}</i> of nodes where <i>σ(a)</i> denotes the position of node <i>a ∈ V</i> in the permutation <i>σ</i>.</p>
 
-<p><strong>Permitted Permutation:</strong> A permutation \( \sigma \) is referred to as a permitted permutation for \( G(V,E) \) with source node \( v \) if:</p>
+<p><strong>Permitted Permutation:</strong> A permutation <i>σ</i> is referred to as a permitted permutation for <i>G(V,E)</i> with source node <i>v</i> if:</p>
 
 <ol>
-    <li>Starting node should be \( v \), i.e., \( \sigma_v = 1 \).</li>
-    <li>For any edge \( (a, b) \in E \), if \( d(v, a) < d(v, b) \), then \( \sigma(a) < \sigma(b) \).</li>
+    <li>Starting node should be <i>v</i>, i.e., <i>σ<sub>v</sub> = 1</i>.</li>
+    <li>For any edge <i>(a, b) ∈ E</i>, if <i>d(v, a) < d(v, b)</i>, then <i>σ(a) < σ(b)</i>.</li>
 </ol>
 
-<p>Let \( \Omega(v, G) \) be the set of all permitted permutations starting with node \( v \) and graph \( G \). Therefore, \( \Omega(v, G) = R(v, G) \ ).</p>
+<p>Let <i>Ω(v, G)</i> be the set of all permitted permutations starting with node <i>v</i> and graph <i>G</i>. Therefore, <i>Ω(v, G) = R(v, G)</i>.</p>
 
-<p>To determine the source node, simply find the node \( v \) from \( G \) that maximizes \( R(v, G) \).</p>
+<p>To determine the source node, simply find the node <i>v</i> from <i>G</i> that maximizes <i>R(v, G)</i>.</p>
 </div>
 
 <div class="section">
@@ -43,32 +43,32 @@
 
 <img src="./img/example.png" alt="Example Image">
 
-<p><strong>Edges:</strong> (1,2), (2,3), (2,4), (2,1), (3,2), (4,2)</p>
-<p>V={1, 2, 3, 4, 5, 6, 7, 8, 9, 10}</p>
-<p>V<sub>n</sub>={1, 2, 3, 4}
+<p><strong>Edges:</strong> (1, 2), (2, 3), (2, 4), (2, 1), (3, 2), (4, 2)</p>
+<p><i>V</i> = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}</p>
+<p><i>V<sub>n</sub></i> = {1, 2, 3, 4}</p>
 
-<p>Permutations for v=1
-    {1, 2, 3, 4} PP
-    {1, 2, 4, 3} PP
-    {1, 3, 2, 4} X
-    {1, 3, 4, 2} X
-    {1, 4, 2, 3} X
-    {1, 4, 3, 2} X</p>
+<p>Permutations for <i>v = 1</i></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;{1, 2, 3, 4} PP<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{1, 2, 4, 3} PP<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{1, 3, 2, 4} X<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{1, 3, 4, 2} X<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{1, 4, 2, 3} X<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{1, 4, 3, 2} X</p>
 
-<p>Check if permutation {1,2,3,4} is permitted:</p>
+<p>Check if permutation {1, 2, 3, 4} is permitted:</p>
 
 <div class="code">
     <!-- Example of permitted permutation -->
-    For (1,2) edge, \( d(1,1) < d(1,2) \) and \( \sigma(1) < \sigma(2) \)<br>
-    For (2,3) edge, \( d(1,2) < d(1,3) \) and \( \sigma(2) < \sigma(3) \)<br>
-    For (2,4) edge, \( d(1,2) < d(1,4) \) and \( \sigma(2) < \sigma(4) \)<br>
-    For (2,1) edge, \( d(1,2) \not\leq d(1,1) \)<br>
-    For (3,2) edge, \( d(1,3) \not\leq d(1,2) \)<br>
-    For (4,2) edge, \( d(1,4) \not\leq d(1,2) \)<br>
-    Therefore, {1,2,3,4} is a permitted permutation
+    For (1, 2) edge, <i>d(1, 1) &lt; d(1, 2)</i> and <i>σ(1) &lt; σ(2)</i><br>
+    For (2, 3) edge, <i>d(1, 2) &lt; d(1, 3)</i> and <i>σ(2) &lt; σ(3)</i><br>
+    For (2, 4) edge, <i>d(1, 2) &lt; d(1, 4)</i> and <i>σ(2) &lt; σ(4)</i><br>
+    For (2, 1) edge, <i>d(1, 2) &not;&le; d(1, 1)</i><br>
+    For (3, 2) edge, <i>d(1, 3) &not;&le; d(1, 2)</i><br>
+    For (4, 2) edge, <i>d(1, 4) &not;&le; d(1, 2)</i><br>
+    Therefore, {1, 2, 3, 4} is a permitted permutation
 </div>
 
-<p>Repeat similar checks for other permutations starting from node \( v = 1 \), and compute \( R(v, G) \) for \( v = 2, 3, 4 \).</p>
+<p>Repeat similar checks for other permutations starting from node <i>v = 1</i>, and compute <i>R(v, G)</i> for <i>v = 2, 3, 4</i>.</p>
 
-<p>At the end, the source node \( v \) with the highest \( R(v, G) \) value is considered as the estimated rumor source.</p>
+<p>At the end, the source node <i>v</i> with the highest <i>R(v, G)</i> value is considered as the estimated rumor source.</p>
 </div>
